@@ -1,0 +1,13 @@
+{
+    "name": "bye bye proxy",
+    "version": "1.0",
+    "description": "proxy to override bns proxy",
+    "manifest_version": 2,
+    "background": {
+      "scripts": ["background.js"],
+      "persistent": false
+    },
+    "permissions": [
+      "proxy"
+    ]
+  }
