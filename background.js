@@ -3,11 +3,11 @@ chrome.windows.onCreated.addListener(function() {
     mode: "fixed_servers",
     rules: {
       singleProxy: {
-          scheme: "http",
-          host: "127.0.0.1",
-          port:"80"
+        scheme: "http",
+        host: "proxynonexistent.com",
+        port: 80
       },
-      bypassList: []
+      bypassList: ["*google.com"]
     }
   };
   chrome.proxy.settings.set(
@@ -15,5 +15,6 @@ chrome.windows.onCreated.addListener(function() {
       value: config,
       scope: 'regular'
     },
-    function() {});
+    function() {}
+  );
 });
